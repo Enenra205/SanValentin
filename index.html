@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de San Valentín</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>¡Feliz San Valentín!</h1>
+            </div>
+            <div class="message">
+                <p>Querido/a <strong>Valeria</strong>,</p>
+                <p>Desde que cruzaron nuestros caminos, algo en mí me dijo que lo que compartiríamos sería algo único. Hoy, con todo mi corazón, quiero expresarte lo que siento.</p>
+                <p>Tu risa, tu mirada, tus gestos; cada pequeño detalle de ti ha hecho mi vida mucho más hermosa. Cada día que paso contigo me siento afortunado/a de haberte encontrado.</p>
+                <p>Hoy, quiero regalarte una pequeña muestra de lo que mi corazón siente por ti, con la esperanza de que podamos seguir compartiendo momentos juntos, sin importar lo que el futuro nos depare.</p>
+                <p>Te quiero más de lo que las palabras pueden expresar, y mi único deseo es que podamos seguir creciendo juntos. Eres mi persona especial, mi razón para sonreír.</p>
+                <p>Con todo mi amor, <strong>¡y siempre lo haré!</strong></p>
+            </div>
+            <div class="footer">
+                <p>Con todo mi cariño,</p>
+                <p><strong>[Tu Nombre]</strong></p>
+            </div>
+            <div class="question">
+                <p><strong>¿Quieres ser mi San Valentín?</strong></p>
+                <div class="buttons">
+                    <button id="yes-btn">Sí, quiero</button>
+                    <button id="no-btn">No, lo siento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Agregar acción a los botones
+        document.getElementById('yes-btn').addEventListener('click', function() {
+            alert("¡Yay! ¡Feliz San Valentín!");
+        });
+
+        document.getElementById('no-btn').addEventListener('click', function() {
+            alert("No hay problema, siempre seremos amigos.");
+        });
+    </script>
+
+</body>
+</html>
