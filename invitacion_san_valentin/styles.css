@@ -1,0 +1,212 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(145deg, #ff8b8b, #ff3377); /* Fondo suave y cálido */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Carta de San Valentín */
+  .card {
+    background: linear-gradient(145deg, #ff66b2, #ff3385); /* Gradiente suave de rosa */
+    width: 800px; /* Aumentamos el ancho de la carta */
+    height: 600px; /* Aumentamos la altura */
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2), inset 0px 0px 20px rgba(255, 255, 255, 0.3);
+    text-align: left;
+    position: relative;
+    animation: cardPop 1s ease-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Animación de entrada de la carta */
+  @keyframes cardPop {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Cabecera de la carta */
+  .header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Mensaje dentro de la carta */
+  .message p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-align: justify;
+  }
+  
+  .message strong {
+    font-weight: 700;
+    color: #fffbf0;
+  }
+  
+  /* Pie de la carta */
+  .footer p {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+  }
+  
+  /* Pregunta final */
+  .question {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .question p {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Estilo de los botones */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  button {
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+  }
+  
+  button:hover {
+    background-color: #ff1f5b;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Animación de fondo */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Corazones animados flotando alrededor */
+  .card::before,
+  .card::after {
+    content: "❤️";
+    font-size: 80px;
+    position: absolute;
+    color: #fff;
+    animation: bounce 2s infinite alternate;
+  }
+  
+  .card::before {
+    top: 10px;
+    left: 10px; /* Corazón en la esquina superior izquierda */
+  }
+  
+  .card::after {
+    bottom: 10px;
+    right: 10px; /* Corazón en la esquina inferior derecha */
+  }
+  
+  /* Animación de rebote */
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Decoración de corazones adicionales */
+  .card .heart {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  .card .heart:nth-child(1) {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .card .heart:nth-child(2) {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .card .heart:nth-child(3) {
+    bottom: 10px;
+    left: 60px;
+  }
+  
+  .card .heart:nth-child(4) {
+    bottom: 10px;
+    right: 60px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+  
